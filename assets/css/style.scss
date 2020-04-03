@@ -173,18 +173,27 @@ header a {
 }
 nav {
     margin: 0px;
-    padding: 25px 15px;
 }
 #content {
     margin: 0px;
-    padding: 25px 15px;
 }
 #content-box {
     margin: 0px auto;
     background-color: #fcfdfe;
-    padding: 20px;
-    border-radius: 4px;
     max-width: 680px;
+}
+
+@media (min-width: 880px) {
+    nav {
+        padding: 25px 15px;
+    }
+    #content {
+        padding: 25px 15px;
+    }
+    #content-box {
+        padding: 20px;
+        border-radius: 4px;
+    }
 }
 
 a {
