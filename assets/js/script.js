@@ -46,8 +46,10 @@ $(document).ready(function() {
     $('#content').toggleClass('show-menu')
   })
   $(window).resize(() => {
-    $('#sidebar').removeClass('show-menu')
-    $('#content').removeClass('show-menu')
+    if ($(window).width() >= 880) {
+      $('#sidebar').removeClass('show-menu')
+      $('#content').removeClass('show-menu')
+    }
   })
 })
 
