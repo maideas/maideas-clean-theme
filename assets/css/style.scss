@@ -1,0 +1,329 @@
+---
+---
+
+@import "normalize";
+@import "rouge-github";
+@import "responsive_layout";
+@import "responsive_fonts_5fs";
+
+@import url('https://fonts.googleapis.com/css?family=Noto+Sans|Noto+Serif');
+@import url('https://fonts.googleapis.com/css?family=Merriweather');
+
+html {
+    -webkit-box-sizing: border-box;
+       -moz-box-sizing: border-box;
+            box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+    -webkit-box-sizing: inherit;
+       -moz-box-sizing: inherit;
+            box-sizing: inherit;
+}
+
+/* ================================================== */
+
+:root {
+    --headerbg: #369;
+    --headerfg: #F8F8F8;
+    --headerlinkactive: #ACE;
+
+    --contentbg: #F0F2F4;
+    --contentfg: #444;
+    --contentlinkactive: #246;
+
+    --codebg: #f8f8f8;
+    --shadow: #888;
+}
+
+/* ================================================== */
+/* header */
+
+header {
+    position: sticky;
+    top: 0px;
+    height: calc(var(--h1size) * 1.8);
+    z-index: 100;
+    opacity: 0.9;
+
+    h1, a {
+        font-size: var(--h1size);
+        font-weight: 700;
+        line-height: 1em;
+        margin: 0;
+    }
+    .avatar {
+        float: left;
+        height: var(--h1size);
+        width: var(--h1size);
+        margin-right: 15px;
+    }
+    #header {
+        margin: calc(var(--h1size) * 0.4) 0;
+        position: relative;
+
+        i {
+            color: var(--contentbg);
+            font-size: var(--h1size);
+            position: absolute;
+            top: 0px;
+            right: 25px;
+        }
+    }
+}
+
+/* ================================================== */
+/* aside */
+
+#sidebar {
+    display: none;
+}
+#sidebar.show-menu {
+    display: block;
+}
+#content.show-menu {
+    display: none;
+}
+
+@media (min-width: 880px) {
+    #sidebar,
+    #content {
+        display: block;
+    }
+    #header i {
+        display: none;
+    }
+}
+
+/* ================================================== */
+/* fonts */
+
+html, body {
+    font-family: 'Noto Sans', sans-serif;
+    font-size: 16px;
+    font-weight: normal;
+}
+nav span,
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'Merriweather', serif;
+}
+header * {
+    font-family: 'Noto Sans', sans-serif;
+}
+pre.highlight {
+    font-size: 0.9em;
+}
+
+.mjx-math {
+    font-size: 1.15rem;
+}
+
+#content-box {
+    h1, h2, h3 {
+        line-height: 1.35;
+        margin-top: 25px;
+        margin-bottom: 16px;
+        font-weight: 500;
+        color: #555;
+    }
+    > h1, > h2, > h3 {
+        margin-top: 10px;
+    }
+    h1 {
+        font-size: var(--h1size);
+    }
+    h2 {
+        font-size: var(--h2size);
+    }
+    h3 {
+        font-size: var(--h3size);
+    }
+}
+
+nav {
+    span {
+        line-height: 1.35;
+        margin-top: 25px;
+        margin-bottom: 16px;
+        font-weight: 500;
+        color: #555;
+        font-size: var(--h3size);
+    }
+}
+
+/* ================================================== */
+/* colors and shadows */
+
+html {
+    background-color: var(--contentbg);
+    color: var(--contentfg);
+}
+header,
+header a {
+    background-color: var(--headerbg);
+    color: var(--contentbg);
+}
+
+#sidebar {
+    margin: 0px;
+    padding: 0px;
+}
+nav {
+    margin: 0px;
+    padding: 25px 15px;
+}
+#content {
+    margin: 0px;
+    padding: 25px 15px;
+}
+#content-box {
+    margin: 0px auto;
+    background-color: #fcfdfe;
+    padding: 20px;
+    border-radius: 4px;
+    max-width: 680px;
+}
+
+a {
+    text-decoration: none;
+}
+a:active, a:hover {
+    outline: 0;
+}
+#header a:active, #header a:hover {
+    color: var(--headerlinkactive);
+}
+#footer a,
+#content a,
+#sidebar a {
+    color: var(--headerbg);
+}
+#footer a:active, #footer a:hover,
+#content a:active, #content a:hover,
+#sidebar a:active, #sidebar a:hover {
+    color: var(--contentlinkactive);
+}
+#content h1:before,
+#content h2:before,
+#content h3:before,
+#content h4:before {
+    color: var(--headerbg);
+}
+hr {
+    color: var(--headerbg);
+}
+
+/* ================================================== */
+/* blockquotes, notes */
+
+blockquote {
+    padding-left: 10px;
+    margin: 20px;
+    margin-left: 12px;
+    border-left: 4px solid var(--headerbg);
+}
+p.note {
+    padding: 15px;
+    margin: 20px 0 20px 0;
+    box-shadow: 0px 0px 8px 0px var(--shadow);
+}
+
+/* ================================================== */
+/* code blocks */
+
+pre.highlight {
+    background-color: var(--codebg);
+    padding: 15px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+pre code {
+    background-color: var(--codebg);
+}
+
+/* ================================================== */
+/* images / videos */
+
+#content {
+    img, video {
+        display: block;
+        max-width: 100%;
+        padding: 15px;
+        margin: 0px auto;
+        margin-bottom: 10px;
+        box-shadow: 0px 0px 8px 0px var(--shadow);
+    }
+    p.img, div.video {
+        margin: 20px 0;
+    }
+    p.img, div.video p {
+        font-size: 0.85em;
+        text-align: center;
+    }
+}
+
+/* ================================================== */
+/* lists */
+
+#content-box {
+    ul {
+        list-style: disc;
+        padding-left: 25px;
+    }
+    ul.top-ul {
+        list-style-type: none;
+        padding-left: 0px;
+
+        span.top-li {
+            font-weight: bold;
+        }
+        ul {
+            margin-top: 0.2em;
+            margin-bottom: 0.2em;
+        }
+        > li + li {
+            margin-top: 1em;
+        }
+    }
+}
+
+nav {
+    ul {
+        list-style: none;
+        padding-left: 0px;
+    }
+    ul.top-ul {
+        list-style-type: none;
+        padding-left: 0px;
+        margin-bottom: 1.5em;
+
+        span.top-li {
+            display: block;
+            margin-bottom: 0.8em;
+        }
+        ul {
+            margin-top: 0.2em;
+            margin-bottom: 0.2em;
+            font-size: 0.9em;
+        }
+        > li li {
+            margin-top: 0.8em;
+            line-height: 1.3em;
+        }
+    }
+}
+
+/* ================================================== */
+/* footer */
+
+#footer-wrapper {
+    border-top: 2px solid var(--headerbg);
+}
+#footer p {
+    text-align: center;
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+

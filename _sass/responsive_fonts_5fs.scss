@@ -1,0 +1,35 @@
+
+                            :root { --fsfactor: 1.20; }    /* header h1 font-size: 1.7rem */
+@media (min-width: 880px) { :root { --fsfactor: 1.24; } }  /* header h1 font-size: 1.9rem */
+@media (min-width: 960px) { :root { --fsfactor: 1.28; } }  /* header h1 font-size: 2.1rem */
+
+:root {
+    --h3size: calc(1rem * var(--fsfactor));
+    --h2size: calc(1rem * var(--fsfactor) * var(--fsfactor));
+    --h1size: calc(1rem * var(--fsfactor) * var(--fsfactor) * var(--fsfactor));
+}
+
+html, body {
+    line-height: 1.5em;
+}
+h6, h5, h4, p {
+    font-size: 1rem;
+    line-height: 1.5em;
+    margin: 0.9em 0;
+}
+h3 {
+    font-size: var(--h3size);
+    line-height: 1.4em;
+    margin: 0.8em 0;
+}
+h2 {
+    font-size: var(--h2size);
+    line-height: 1.3em;
+    margin: 0.7em 0;
+}
+h1 {
+    font-size: var(--h1size);
+    line-height: 1.2em;
+    margin: 0.6em 0;
+}
+
