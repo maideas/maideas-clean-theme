@@ -184,6 +184,9 @@ nav {
 }
 
 @media (min-width: 880px) {
+    html {
+        background-color: #fcfdfe;  /* like #content-box */
+    }
     nav {
         padding: 25px 15px;
     }
