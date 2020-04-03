@@ -167,20 +167,14 @@ header a {
     color: var(--contentbg);
 }
 
-#sidebar {
-    margin: 0px;
-    padding: 0px;
-}
-nav {
-    margin: 0px;
-}
+nav,
+#sidebar,
 #content {
     margin: 0px;
 }
 #content-box {
     margin: 0px auto;
     background-color: #fcfdfe;
-    max-width: 680px;
 }
 
 @media (min-width: 880px) {
@@ -190,12 +184,16 @@ nav {
     nav {
         padding: 25px 15px;
     }
+    #sidebar {
+        padding: 0px;
+    }
     #content {
         padding: 25px 15px;
     }
     #content-box {
         padding: 20px;
         border-radius: 4px;
+        max-width: 680px;
     }
 }
 
