@@ -25,10 +25,12 @@ html {
     padding: 1px 0px;
 }
 #header,
-#content,
 #sidebar,
 #footer {
     padding: 0px 3%;
+}
+#content {
+    padding: 15px 3%;
 }
 #header {
     margin: 0px;
