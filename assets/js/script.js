@@ -41,14 +41,18 @@ $(document).ready(function() {
     }
   })
 
-  $("#header i.fa-bars").on('click', () => {
+  $("#header i.fas").on('click', () => {
     $('#sidebar').toggleClass('show-menu')
     $('#content').toggleClass('show-menu')
+    $("#header i.fas").toggleClass('show-icon')
   })
+
   $(window).resize(() => {
-    if ($(window).width() >= 880) {
+    if ($(window).width() >= 900) {
       $('#sidebar').removeClass('show-menu')
       $('#content').removeClass('show-menu')
+      $("#header i.fa-bars").addClass('show-icon')
+      $("#header i.fa-times").removeClass('show-icon')
     }
   })
 })

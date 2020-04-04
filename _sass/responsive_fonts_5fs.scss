@@ -1,7 +1,7 @@
 
-                            :root { --fsfactor: 1.20; }    /* header h1 font-size: 1.7rem */
-@media (min-width: 880px) { :root { --fsfactor: 1.24; } }  /* header h1 font-size: 1.9rem */
-@media (min-width: 960px) { :root { --fsfactor: 1.28; } }  /* header h1 font-size: 2.1rem */
+                             :root { --fsfactor: 1.20; }    /* header h1 font-size: 1.7rem */
+@media (min-width:  640px) { :root { --fsfactor: 1.24; } }  /* header h1 font-size: 1.9rem */
+@media (min-width: 1140px) { :root { --fsfactor: 1.28; } }  /* header h1 font-size: 2.1rem */
 
 :root {
     --h3size: calc(1rem * var(--fsfactor));
