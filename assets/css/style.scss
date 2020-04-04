@@ -175,6 +175,7 @@ nav,
 #content-box {
     margin: 0px auto;
     background-color: #fcfdfe;
+    max-width: 680px;
 }
 
 @media (min-width: 880px) {
@@ -193,7 +194,6 @@ nav,
     #content-box {
         padding: 20px;
         border-radius: 4px;
-        max-width: 680px;
     }
 }
 
