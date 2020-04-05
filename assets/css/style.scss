@@ -30,7 +30,7 @@ html {
     --headerfg: #F8F8F8;
     --headerlinkactive: #ACE;
 
-    --contentbg: #F0F2F4;
+    --contentbg: #F0F1F2;
     --contentfg: #444;
     --contentlinkactive: #246;
 
@@ -196,7 +196,7 @@ header a {
     }
     #sidebar,
     #content {
-        padding: 25px 15px;
+        padding: 15px 15px;
     }
     #sidebar-box,
     #content-box {
@@ -215,7 +215,7 @@ header a {
     #sidebar,
     #content {
         background-color: var(--contentbg);
-        padding: 25px 15px;
+        padding: 15px 15px;
     }
     #sidebar {
         padding-right: 0px;
