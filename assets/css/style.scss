@@ -24,18 +24,48 @@ html {
 }
 
 /* ================================================== */
+/* color definition */
 
 :root {
+    --pagebg: #F0F1F2;
+
     --headerbg: #369;
-    --headerfg: #F8F8F8;
+    --headerfg: #F0F1F2;
     --headerlinkactive: #ACE;
 
-    --contentbg: #F0F1F2;
+    --headlinefg: #555;
+
+    --contentbg: #FCFDFE;
     --contentfg: #444;
     --contentlinkactive: #246;
 
-    --codebg: #f8f8f8;
+    --codebg: #F8F8F8;
     --shadow: #888;
+}
+
+/* ================================================== */
+/* basic fonts and colors */
+
+html, body {
+    font-family: 'Noto Sans', sans-serif;
+    font-size: 16px;
+    font-weight: normal;
+    background-color: var(--contentbg);
+    color: var(--contentfg);
+}
+
+@media (min-width: 640px) {
+    html, body {
+        background-color: var(--pagebg);
+    }
+}
+
+#sidebar-box span,
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'Merriweather', serif;
+}
+header * {
+    font-family: 'Noto Sans', sans-serif;
 }
 
 /* ================================================== */
@@ -47,12 +77,15 @@ header {
     height: calc(var(--h1size) * 1.8);
     z-index: 100;
     opacity: 0.9;
+    background-color: var(--headerbg);
+    color: var(--headerfg);
 
     h1, a {
         font-size: var(--h1size);
         font-weight: 700;
         line-height: 1em;
         margin: 0;
+        color: inherit;
     }
     .avatar {
         float: left;
@@ -63,36 +96,38 @@ header {
     #header {
         margin: calc(var(--h1size) * 0.4) 0;
         position: relative;
-
-        .fas {
-            color: var(--contentbg);
-            font-size: var(--h1size);
-            position: absolute;
-            top: 0px;
-            right: 0px;
-            padding: 0px 25px;
-        }
-        .fa-times {
-            right: 3px;
-        }
-    }
-}
-
-#header .fas {
-    display: none;
-}
-#header .fas.show-icon {
-    display: block;
-}
-
-@media (min-width: 900px) {
-    #header .fas.show-icon {
-        display: none;
     }
 }
 
 /* ================================================== */
-/* aside */
+/* header menu icon */
+
+#header {
+    .fas {
+        display: none;
+        color: inherit;
+        font-size: var(--h1size);
+        position: absolute;
+        top: 0px;
+        right: 0px;
+        padding: 0px 25px;
+    }
+    .fa-times {
+        right: 3px;
+    }
+    .fas.show-icon {
+        display: block;
+    }
+    @media (min-width: 900px) {
+        .fas.show-icon {
+            display: none;
+        }
+    }
+}
+
+
+/* ================================================== */
+/* sidebar */
 
 #sidebar {
     display: none;
@@ -100,38 +135,35 @@ header {
 #sidebar.show-menu {
     display: block;
 }
+
+@media (min-width: 900px) {
+    #sidebar {
+        display: block;
+    }
+}
+
+#sidebar-box {
+    span {
+        line-height: 1.35;
+        margin-top: 25px;
+        margin-bottom: 16px;
+        font-weight: 500;
+        color: var(--headlinefg);
+        font-size: var(--h4size);
+    }
+}
+
+/* ================================================== */
+/* content */
+
 #content.show-menu {
     display: none;
 }
 
 @media (min-width: 900px) {
-    #sidebar,
     #content {
         display: block;
     }
-}
-
-/* ================================================== */
-/* fonts */
-
-html, body {
-    font-family: 'Noto Sans', sans-serif;
-    font-size: 16px;
-    font-weight: normal;
-}
-#sidebar-box span,
-h1, h2, h3, h4, h5, h6 {
-    font-family: 'Merriweather', serif;
-}
-header * {
-    font-family: 'Noto Sans', sans-serif;
-}
-pre.highlight {
-    font-size: 0.9em;
-}
-
-.mjx-math {
-    font-size: 1.15rem;
 }
 
 #content-box {
@@ -140,9 +172,9 @@ pre.highlight {
         margin-top: 25px;
         margin-bottom: 16px;
         font-weight: 500;
-        color: #555;
+        color: var(--headlinefg);
     }
-    > h1, > h2, > h3 {
+    h1:first-child {
         margin-top: 10px;
     }
     h1 {
@@ -156,29 +188,8 @@ pre.highlight {
     }
 }
 
-#sidebar-box {
-    span {
-        line-height: 1.35;
-        margin-top: 25px;
-        margin-bottom: 16px;
-        font-weight: 500;
-        color: #555;
-        font-size: var(--h3size);
-    }
-}
-
 /* ================================================== */
-/* colors and shadows */
-
-html {
-    background-color: #fcfdfe;  /* default: like #content-box */
-    color: var(--contentfg);
-}
-header,
-header a {
-    background-color: var(--headerbg);
-    color: var(--contentbg);
-}
+/* sidebar and content */
 
 #sidebar,
 #content {
@@ -187,13 +198,10 @@ header a {
 #sidebar-box,
 #content-box {
     margin: 0px auto;
-    background-color: #fcfdfe;
+    background-color: var(--contentbg);
 }
 
 @media (min-width: 640px) {
-    html {
-        background-color: var(--contentbg);
-    }
     #sidebar,
     #content {
         padding: 15px 15px;
@@ -209,12 +217,8 @@ header a {
 }
 
 @media (min-width: 900px) {
-    html {
-        background-color: var(--contentbg);
-    }
     #sidebar,
     #content {
-        background-color: var(--contentbg);
         padding: 15px 15px;
     }
     #sidebar {
@@ -226,6 +230,9 @@ header a {
         border-radius: 4px;
     }
 }
+
+/* ================================================== */
+/* links */
 
 a {
     text-decoration: none;
@@ -246,12 +253,10 @@ a:active, a:hover {
 #sidebar a:active, #sidebar a:hover {
     color: var(--contentlinkactive);
 }
-#content h1:before,
-#content h2:before,
-#content h3:before,
-#content h4:before {
-    color: var(--headerbg);
-}
+
+/* ================================================== */
+/* horizontal line */
+
 hr {
     color: var(--headerbg);
 }
@@ -275,6 +280,7 @@ p.note {
 /* code blocks */
 
 pre.highlight {
+    font-size: 0.9em;
     background-color: var(--codebg);
     padding: 15px;
     border: 1px solid #ccc;
@@ -282,6 +288,13 @@ pre.highlight {
 }
 pre code {
     background-color: var(--codebg);
+}
+
+/* ================================================== */
+/* math */
+
+.mjx-math {
+    font-size: 1.15rem;
 }
 
 /* ================================================== */
@@ -333,7 +346,7 @@ pre code {
 #sidebar-box {
     ul {
         list-style: none;
-        padding-left: 0px;
+        padding-left: 10px;
     }
     ul.top-ul {
         list-style-type: none;
@@ -351,7 +364,7 @@ pre code {
         }
         > li li {
             margin-top: 0.8em;
-            line-height: 1.3em;
+            line-height: 1.2em;
         }
     }
 }
