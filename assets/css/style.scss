@@ -351,7 +351,11 @@ pre code {
 #sidebar-box {
     ul {
         list-style: none;
-        padding-left: 0px;
+        padding-left: 20px;
+        
+        @media (min-width: 900px) {
+            padding-left: 0px;
+        }
     }
     ul.top-ul {
         list-style-type: none;
@@ -365,7 +369,10 @@ pre code {
         ul {
             margin-top: 0.2em;
             margin-bottom: 0.2em;
-            font-size: 0.9em;
+            
+            @media (min-width: 900px) {
+                font-size: 0.9em;
+            }
         }
         > li li {
             margin-top: 0.8em;
