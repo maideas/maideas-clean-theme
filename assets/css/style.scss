@@ -253,6 +253,11 @@ a:active, a:hover {
 #sidebar a:active, #sidebar a:hover {
     color: var(--contentlinkactive);
 }
+#footer a:hover,
+#content a:hover,
+#sidebar a:hover {
+    text-decoration: underline;
+}
 
 /* ================================================== */
 /* horizontal line */
