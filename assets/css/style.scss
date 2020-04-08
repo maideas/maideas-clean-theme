@@ -320,6 +320,32 @@ pre code {
     p.img, div.video p {
         font-size: 0.85em;
         text-align: center;
+        margin-left: auto;
+        margin-right: auto;
+        display: block;
+    }
+
+    @media (min-width: 640px) {
+        div.video.w90 video,
+        div.video.w90 p {
+            width: 90%;
+        }
+        div.video.w80 video,
+        div.video.w80 p {
+            width: 80%;
+        }
+        div.video.w70 video,
+        div.video.w70 p {
+            width: 70%;
+        }
+        div.video.w60 video,
+        div.video.w60 p {
+            width: 60%;
+        }
+        div.video.w50 video,
+        div.video.w50 p {
+            width: 50%;
+        }
     }
 }
 
