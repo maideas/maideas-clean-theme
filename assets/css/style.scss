@@ -357,21 +357,6 @@ pre code {
         list-style: disc;
         padding-left: 40px;
     }
-    ul.top-ul {
-        list-style-type: none;
-        padding-left: 0px;
-
-        span.top-li {
-            font-weight: bold;
-        }
-        ul {
-            margin-top: 0.2em;
-            margin-bottom: 0.2em;
-        }
-        > li + li {
-            margin-top: 1em;
-        }
-    }
 }
 
 #sidebar-box {

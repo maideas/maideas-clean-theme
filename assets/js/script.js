@@ -18,7 +18,7 @@ $(document).ready(function() {
   })
 
   /* add top-ul for CSS styling and "span" wrap top li texts */
-  $("ul").each(function() {
+  $("#sidebar-box ul").each(function() {
     if (!$(this).parent().is("li")) {
       if ($(this).has("li").has("ul").length) {
         $(this).addClass("top-ul")
