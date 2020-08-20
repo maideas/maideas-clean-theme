@@ -92,6 +92,7 @@ header {
         height: var(--h1size);
         width: var(--h1size);
         margin-right: 15px;
+        border-radius: 25%;
     }
     #header {
         margin: calc(var(--h1size) * 0.4) 0;
@@ -124,7 +125,6 @@ header {
         }
     }
 }
-
 
 /* ================================================== */
 /* sidebar */
