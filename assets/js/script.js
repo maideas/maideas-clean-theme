@@ -6,7 +6,7 @@ $(document).ready(function() {
     var par = $(this).parent()
     var parpar = $(this).parent().parent()
     if (par.is("p")) {
-      par.before('<div class="clearfix"></div>')
+      //par.before('<div class="clearfix"></div>')
       par.addClass('img')
     }
     if (par.is("a")) {
@@ -35,6 +35,15 @@ $(document).ready(function() {
     $('#sidebar').toggleClass('show-menu')
     $('#content').toggleClass('show-menu')
     $("#header i.fas").toggleClass('show-icon')
+  })
+
+  $("a.show-nav-bar").on('click', () => {
+    if ($(window).width() < 900) {
+      $('#sidebar').addClass('show-menu')
+      $('#content').addClass('show-menu')
+      $("#header i.fa-bars").removeClass('show-icon')
+      $("#header i.fa-times").addClass('show-icon')
+    }
   })
 
   $(window).resize(() => {
