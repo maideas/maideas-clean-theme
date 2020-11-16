@@ -11,7 +11,7 @@ $(document).ready(function() {
     }
     if (par.is("a")) {
       if (parpar.is("p")) {
-        parpar.before('<div class="clearfix"></div>')
+        //parpar.before('<div class="clearfix"></div>')
         parpar.addClass('img')
       }
     }
