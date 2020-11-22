@@ -172,7 +172,7 @@ header {
         color: var(--headlinefg);
     }
     h1:first-child {
-        margin-top: 10px;
+        margin-top: 0px;
         margin-bottom: 30px;
     }
 }
@@ -195,9 +195,12 @@ header {
     #content {
         padding: 15px 15px;
     }
-    #sidebar-box,
+    #sidebar-box {
+        padding: 30px 20px;
+        border-radius: 4px;
+    }
     #content-box {
-        padding: 20px;
+        padding: 40px 30px;
         border-radius: 4px;
     }
     #sidebar-box span:first-child {
@@ -213,9 +216,12 @@ header {
     #sidebar {
         padding-right: 0px;
     }
-    #sidebar-box,
+    #sidebar-box {
+        padding: 30px 20px;
+        border-radius: 4px;
+    }
     #content-box {
-        padding: 20px;
+        padding: 40px 40px;
         border-radius: 4px;
     }
 }
@@ -297,7 +303,7 @@ pre code {
 #content {
     img, video {
         display: block;
-        max-width: 90%;
+        max-width: 100%;
         padding: 15px;
         margin: 0px auto;
         margin-bottom: 10px;
@@ -376,7 +382,7 @@ pre code {
             }
         }
         > li li {
-            margin-top: 0.8em;
+            margin-top: 1em;
             line-height: 1.2em;
         }
     }
