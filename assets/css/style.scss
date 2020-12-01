@@ -121,6 +121,7 @@ header {
 
 #sidebar {
     display: none;
+    text-align: center;
 }
 #sidebar.show-menu {
     display: block;
@@ -129,6 +130,7 @@ header {
 @media (min-width: 900px) {
     #sidebar {
         display: block;
+        text-align: left;
     }
 }
 
@@ -372,8 +374,23 @@ pre code {
 
         span.top-li {
             display: block;
-            margin-bottom: 0.8em;
+            margin-bottom: 1em;
             font-weight: 600;
+        }
+        span.top-li::before,
+        span.top-li::after {
+            display: block;
+            content: "";       
+            height: 2px;
+            background: var(--headerbg);
+            opacity: 0.9;
+            border-radius: 1px;
+            width: 40%;
+            margin: 5px auto;
+            
+            @media (min-width: 900px) {
+                width: 100%;
+            }
         }
         ul {
             margin-top: 0.2em;
