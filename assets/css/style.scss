@@ -135,6 +135,8 @@ header {
 }
 
 #sidebar-box {
+    padding: 20px 20px;
+
     span {
         line-height: 1.35;
         margin-top: 25px;
@@ -361,15 +363,9 @@ pre code {
 #sidebar-box {
     ul {
         list-style: none;
-        padding-left: 25px;
-        
-        @media (min-width: 900px) {
-            padding-left: 0px;
-        }
+        padding-left: 0px;
     }
     ul.top-ul {
-        list-style-type: none;
-        padding-left: 0px;
         margin-bottom: 1.5em;
 
         span.top-li {
@@ -417,5 +413,43 @@ pre code {
     text-align: center;
     margin-top: 5px;
     margin-bottom: 5px;
+}
+
+/* ================================================== */
+/* misc */
+
+label {
+	display: block;
+}
+
+input, button, select, textarea {
+	font-family: inherit;
+	font-size: inherit;
+	padding: 0.3em 0.6em;
+	margin: 0;
+	border: 1px solid #ccc;
+	border-radius: 2px;
+}
+
+input:disabled {
+	color: #ccc;
+}
+
+button {
+	color: #333;
+	background-color: #f4f4f4;
+	outline: none;
+}
+
+button:disabled {
+	color: #999;
+}
+
+button:not(:disabled):active {
+	background-color: #ddd;
+}
+
+button:focus {
+	border-color: #666;
 }
 
