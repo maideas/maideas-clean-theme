@@ -15,6 +15,11 @@ $(document).ready(function() {
     }
   })
 
+  /* copy container width to parent breakout div */
+  $(".breakout .container").each(function() {
+    $(this).parent().css("width", $(this).css("width"))
+  })
+
   $("#header i.fas").on('click', () => {
     $(window).scrollTop(0)
     $('#sidebar').toggleClass('show-menu')
