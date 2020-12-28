@@ -17,6 +17,12 @@
     <!-- http://docs.mathjax.org/en/latest/ -->
     <script type="text/javascript" async src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-MML-AM_CHTML"></script>
     {% endif %}
+    {% for style in page.style %}
+    <link type="text/css" rel="stylesheet" href="{{style.src}}">
+    {% endfor %}
+    {% for script in page.script %}
+    <script type="text/javascript" {{script.flags}} src="{{script.src}}"></script>
+    {% endfor %}
     {% seo %}
   </head>
   <body>
