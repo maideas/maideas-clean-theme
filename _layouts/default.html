@@ -15,7 +15,7 @@
     <title>{{ page.title }}</title>
     {% if page.mathjax %}
     <!-- http://docs.mathjax.org/en/latest/ -->
-    <script type="text/javascript" async src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-MML-AM_CHTML"></script>
+    <script type="text/javascript" defer src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-MML-AM_CHTML"></script>
     {% endif %}
     {% for style in page.style %}
     <link type="text/css" rel="stylesheet" href="{{style.src}}">
