@@ -288,8 +288,10 @@ pre.highlight {
     font-size: 0.9em;
     background-color: var(--codebg);
     padding: 15px;
+    margin: 30px 0;
     border: 1px solid #ccc;
     border-radius: 4px;
+    overflow-x: auto;
 }
 pre code {
     background-color: var(--codebg);
