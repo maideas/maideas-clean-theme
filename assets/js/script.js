@@ -14,6 +14,18 @@ $(document).ready(function() {
       }
     }
   })
+  $("#landing-page-nav ul").each(function() {
+    if (!$(this).parent().is("li")) {
+      if ($(this).has("li").has("ul").length) {
+        $(this).addClass("top-ul")
+        $(this).children("li").each(function() {
+          if (!$(this).contents().first().is("ul")) {
+            $(this).contents().first().wrap('<span class="top-li"></span>')
+          }
+        })
+      }
+    }
+  })
 
   /* copy container width to parent breakout div */
   $(".breakout .container").each(function() {

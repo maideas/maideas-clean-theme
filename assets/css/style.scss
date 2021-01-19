@@ -363,6 +363,7 @@ pre code {
     }
 }
 
+#landing-page-nav,
 #sidebar-box {
     ul {
         list-style: none;
@@ -403,6 +404,14 @@ pre code {
             margin-top: 1em;
             line-height: 1.2em;
         }
+    }
+}
+
+#landing-page-nav {
+    text-align: center;
+
+    @media (min-width: 900px) {
+        display: none;
     }
 }
 
