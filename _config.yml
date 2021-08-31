@@ -3,3 +3,5 @@ description: MAIDEAS clean theme
 markdown: kramdown
 sass:
   style: compressed
+plugins:
+  - jekyll-seo-tag
